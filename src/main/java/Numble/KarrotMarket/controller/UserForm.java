@@ -1,6 +1,6 @@
-package Numble.KarrotMarket.domain;
+package Numble.KarrotMarket.controller;
 
-public class User {
+public class UserForm {
 
     private String id, pwd, name, phone, nickname;
 
