@@ -1,46 +1,27 @@
 package Numble.KarrotMarket.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+@Getter @Setter
 public class User {
 
-    private String id, pwd, name, phone, nickname;
+    @Id @GeneratedValue
+    @Column(name = "userid")
+    private Long id;
 
-    public String getId() {
-        return id;
-    }
+    private String pwd;
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    private String name;
 
-    public String getPwd() {
-        return pwd;
-    }
+    private String phone;
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
-    }
+    private String nickname;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
 }
